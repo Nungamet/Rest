@@ -62,7 +62,7 @@ class RestaurantApp:
         # Заголовок
         title_label = ctk.CTkLabel(
             self.login_frame,
-            text="REST - ОНЛАЙН СИСТЕМА",
+            text="REST",
             font=("Arial", 28, "bold"),
             text_color=COLORS["primary"]
         )
@@ -71,7 +71,7 @@ class RestaurantApp:
         # Поле ввода имени
         ctk.CTkLabel(
             self.login_frame,
-            text="Введите ваше имя:",
+            text="Введите ваш ник:",
             font=("Arial", 18),
             text_color=COLORS["text_primary"]
         ).pack(pady=10)
@@ -83,7 +83,7 @@ class RestaurantApp:
             font=("Arial", 16),
             width=300,
             height=50,
-            placeholder_text="Введите имя"
+            placeholder_text="Введите ник"
         )
         self.username_entry.pack(pady=10)
         
@@ -224,7 +224,7 @@ class RestaurantApp:
             # Первоначальная загрузка данных
             self.load_initial_data()
             
-            notifier.show_notification("Успех", "Подключено к онлайн-системе!")
+            notifier.show_notification("Успех", "Подключено!")
             
         except Exception as e:
             notifier.show_notification("Ошибка", f"Ошибка создания интерфейса: {e}")
